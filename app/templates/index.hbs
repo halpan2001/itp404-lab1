@@ -1,0 +1,27 @@
+<style>
+h3{
+  font-family: sans-serif;
+}
+.comments{
+
+}
+
+</style>
+
+
+{{#each model.data.children as |thread|}}
+<h3>
+  {{thread.data.title}}
+</h3>
+<div>
+  <span class = 'comments'>Number of Comments: {{thread.data.num_comments}}</span>
+<br />
+Domain: {{thread.data.domain}}
+<br />
+ups: {{thread.data.ups}}
+<br />
+downs: {{thread.data.downs}}
+</div>
+{{/each}}
+
+{{outlet}}
